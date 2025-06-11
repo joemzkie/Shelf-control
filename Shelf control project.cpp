@@ -18,7 +18,7 @@ Items itemsale[100];//array use to store memory temporarily
 int ctr = 0;
 
 bool compareByQuantity(const Items &a, const Items &b) {//this is the sorting function organize prices by descending order
-    return a.itemQuantity > b.itemQuantity; //this is intro sort with 0(n log n) time complexity
+    return a.itemQuantity > b.itemQuantity; 
 }
 
 bool parseLine(const string& line, Items& item) {//the function executed to find the id of item to manipulate
@@ -146,7 +146,7 @@ void confirmSale() {//confirming the sale after adding the items
     }
 
     // Sort items by quantity (descending)
-    sort(itemsale, itemsale + ctr, compareByQuantity);
+    sort(itemsale, itemsale + ctr, compareByQuantity);//Intro sort built in C++ feature
 
     // Display receipt
     cout << "===== SALE RECEIPT =====\n";
